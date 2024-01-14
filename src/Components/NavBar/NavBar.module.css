@@ -1,0 +1,89 @@
+.navbar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+}
+
+.logo {
+    width: 200px;
+    margin-right: 160px;
+}
+
+.refContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ref1,
+.ref2,
+.ref3 {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.dropdownContainer {
+    position: relative;
+}
+
+.dropdownContent {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 95%;
+    right: -5px;
+    background-color:transparent;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.dropdownContainer:hover .dropdownContent {
+    visibility: visible;
+    opacity: 1;
+}
+
+.refm1 {
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    background-image: url('../../assets/DDMR3.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.refm2 {
+    font-size: 20px;
+    width: 223px;
+    height: 50px;
+    background-image: url('../../assets/DDMR2.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    margin-left: auto;
+}
+
+
+.refm3 {
+    font-size: 20px;
+    width: 196px;
+    height: 50px;
+    background-image: url('../../assets/DDMR1.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    margin-left: auto;
+}

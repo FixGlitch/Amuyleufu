@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from 'react';
+import {Route, Routes, useLocation} from "react-router-dom";
+import './App.css';
+import NavBar from "./Components/NavBar/NavBar";
+import Footer from './Components/Footer/Footer';
+import Home from './Components/Home/Home';
+import Alojamientos from './Components/Alojamientos/Alojamientos';
+import Vuelos from './Components/Vuelos/Vuelos';
+import Paquetes from './Components/Paquetes/Paquetes';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
+  const {pathname} = useLocation();
+    return (
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {pathname !== "/" && <NavBar/>}
+        <Routes>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/alojamientos' element={<Alojamientos/>}/>
+          <Route path='/vuelos' element={<Vuelos/>}/>
+          <Route path='/paquetes' element={<Paquetes/>}/>
+        </Routes>
+        {pathname !== "/" && <Footer/>}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    )
+  }
 
-export default App
+export default App;
