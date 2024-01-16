@@ -36,7 +36,7 @@
     flex-direction: column;
     position: absolute;
     top: 95%;
-    right: 0px;
+    right: -10px;
     background-color:transparent;
     z-index: 1;
     visibility: hidden;
