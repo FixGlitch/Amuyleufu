@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 
 :root {
-  line-height: 1.5;
-  font-weight: 400;
+  --font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -14,9 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-color: #ffffff;
+body,
+html {
   margin: 0;
-  max-width: 100%;
-  min-height: 100vh;
+  padding: 0;
+  height: 100%;
 }
